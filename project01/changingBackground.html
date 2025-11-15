@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Background Color</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Click the Button to Change Background</h1>
+    <button id="changeColorBtn">Change Color</button>
+  </div>
+
+  <script>
+    const colors = [
+  "#FF5733", "#33FF57", "#3357FF", "#F39C12", "#8E44AD", "#2ECC71", "#E74C3C", "#1ABC9C",
+  "#3498DB", "#9B59B6", "#34495E", "#16A085", "#27AE60", "#2980B9", "#8E44AD", "#2C3E50",
+  "#F1C40F", "#E67E22", "#E74C3C", "#ECF0F1", "#95A5A6", "#D35400", "#C0392B", "#BDC3C7",
+  "#7F8C8D", "#FF6F61", "#6B5B95", "#88B04B", "#F7CAC9", "#92A8D1", "#955251", "#B565A7"
+];
+
+const button = document.getElementById("changeColorBtn");
+
+button.addEventListener("click", () => {
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.backgroundColor = randomColor;
+});
+  </script>
+</body>
+</html>
